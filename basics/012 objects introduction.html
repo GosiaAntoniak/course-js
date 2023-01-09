@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Udemy Course with Vanila Java Script</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Udemy Course with Vanilla Java Script" name="description"/>
+</head>
+<body>
+<script>
+    //proste zmienne
+    let num = 10;
+    
+    //Utworzenie obiektu w postaci notacji iterału
+    let car1 = {
+        brand : "Chevrolet",
+        model : "Corvette",
+        year : 1976
+    };
+    console.log(car1);
+    console.log(car1.brand);
+    console.log(car1.year);
+    
+    let rocket = {
+        brand : "spaceX",
+        model : "Falcon",
+        topSpeed : 30000,
+        
+        printInfo: function () {
+            console.log(this.brand, this.model, this.topSpeed);
+        },
+        printTopSpeed: function () {
+            console.log("Maksymalna prędkość rekiety to:", this.topSpeed);
+        },
+    }
+    
+    rocket.printInfo();
+    rocket.printTopSpeed();
+</script>
+</body>
+</html>
