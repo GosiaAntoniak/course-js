@@ -6,3 +6,5 @@ Hello my Friends. I am learning Java Script and I learn about:
 2. Variables
 3. Variables identifiers
 4. Primitive values
+5. Variables exescises
+6. 
