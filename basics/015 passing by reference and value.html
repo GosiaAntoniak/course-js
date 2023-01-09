@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Udemy Course with Vanila Java Script</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Udemy Course with Vanilla Java Script" name="description"/>
+</head>
+<body>
+<script>
+    let data = 10;
+    let info = data; //w typach prostych jak liczby tekst null undefuned mamy kopiowanie wartośc ze zmiennej do zmiennnej
+    console.log(data, info); //10,10
+    data = 33;
+    console.log(data, info); //33,10 dwa oddzielne miejsca z danymi
+
+    let obj = {
+        a: 10
+    };
+
+    let test = obj; //kiedy przypisujemy obiekt do zmiennej staej to nei kopiujemy wartości tylko kopiujemy referencję czyli ten sam adres w pamięci któy będzie dostępny dla zmiennej test ineczej mówiąc zmienne test i obj wskazują na ten sam obiekt w pamięci to jest właśnie referencja
+    console.log(obj.a, test.a); //10,10
+    obj.a = 1;
+    console.log(obj.a, test.a); //1,1 to jest dowód że obie zmienne wskazują na to samo miejsce w pamięci
+
+    //typy proste są przekazuwane przez wartość czyli są to ich kopie
+    function something(a, b) {
+        a = 80;
+        return a + b;
+    }
+
+    let someA = 23;
+    let someB = 40;
+    console.log(something(someA, someB));
+    
+    console.log(someA, someB); //nadal wartości 23, 40
+    
+    let objA = {
+        a: 15
+    };
+    let objB = {
+        b: 70
+    }
+    function foo(obj1, obj2) {
+        objA.a = 30;
+        return objA.a + objB.b
+    }
+    console.log(foo(objA, objB)); //obiekty przekazane są przez referencje
+    
+    console.log(objA.a, objB.b); // 30,70 wartość 30 została nadpisana z poziomu funkcji czyli obiety nie są przekazywane przez wartość
+let arrTest = [];
+let arr = [1, 2, 5];//tablica to też obiekt
+function checkArr(arr) {
+    arr[0] = 99; //tablca to obiekt więc będzie ta wartość nadpisana
+    arr.push(8);
+}
+checkArr(arr);
+console.log(arr); //tablica została zmodyfikowana ponieważ jest również obiektem
+
+
+</script>
+</body>
+</html>
