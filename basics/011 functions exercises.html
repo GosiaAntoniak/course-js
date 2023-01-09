@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Udemy Course with Vanila Java Script</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Udemy Course with Vanilla Java Script" name="description"/>
+</head>
+<body>
+<script>
+    /*
+    1. Funkcja substract
+    2. Funkcja do obliczenia wartości bezwzględnej
+    czyli dla -2 zwraca 2, dla 2 zwraca 2
+     */
+    
+    //EX 1
+    function substract(x, y) {
+        return  x - y;
+        
+    }
+    console.log("Wynik odejmowania:", substract(10, 7));
+
+    //EX 2
+    function abs(a) {
+        if (a < 0) return -a; //return zawsze kończy działanie funkcji
+        return  a;
+    }
+    
+    console.log("Wartość bezwzględna:", abs(-3));
+</script>
+</body>
+</html>

@@ -12,4 +12,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 8. Loops: while, do while, for
 9. Loops exercises
 10. Functions
-11. 
+11. Functions exercises
+12. 
