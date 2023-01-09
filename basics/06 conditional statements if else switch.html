@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Udemy Course with Vanila Java Script</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Udemy Course with Vanilla Java Script" name="description"/>
+</head>
+<body>
+<script>
+    //IF ELSE
+    //Przykład 1
+    let data = 5;
+
+    if (data == 5) {
+        console.log("Liczba w data jest równa od 5");
+    }
+    if (data > 5) {
+        console.log("Liczba w data jest większa od 5");
+    }
+    if (data < 5) {
+        console.log("Liczba w data jest mniejsza od 5");
+    }
+
+    //Przykład 2
+    let age = 20
+
+    if (age >= 18) {
+        console.log("Może głosować");
+    }
+    if (age < 18) {
+        console.log("Nie może głosować");
+        console.log("Musi poczekać do 18 urodzin");
+    }
+
+    //Można inaczej zapisać - przykład 2
+    age = 12;
+
+    if (age >= 18) {
+        console.log("Może głosować");
+    } else {
+        console.log("Nie może głosować");
+    }
+
+    //Przykład 3
+    let sportRanking = 1;
+
+    if (sportRanking == 1) {
+        console.log("Pierwsze miejsce");
+    } else if (sportRanking == 2) {
+        console.log("Drugie miejsce");
+    } else if (sportRanking == 3) {
+        console.log("Trzecie miejsce");
+    } else {
+        console.log("Niestety brak medalu, spróbuj za rok");
+    }
+
+    //Przykład 4
+    const x = 10;
+    let y = 99;
+
+    if (x > y) {
+        console.log("x jest większy od y");
+    } else {
+        console.log("x jest mniejszy od y");
+    }
+
+    //SWITCH
+    //Przykład 1
+    let topSpeed = 420;
+
+    switch (topSpeed) {
+        case 100:
+            console.log("Mała prędkość maksymalna");
+            break;
+        case 150:
+            console.log("Prędkość 150 km/h");
+            break;
+        case 200:
+            console.log("Szybko: 200 km/h");
+            break;
+        case 250:
+            console.log("Wow 250 km/h");
+            break;
+        case 300:
+            console.log("Bardzo szybko: 300 km/h");
+            break;
+        case 310:
+        case 320:
+        case 330:
+            console.log("Prędkość powyżej 300 km/h");
+            break;
+        default:
+            console.log("Brak informacji dla tej prędkości");
+    }
+
+</script>
+</body>
+</html>

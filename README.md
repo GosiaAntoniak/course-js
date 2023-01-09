@@ -7,4 +7,5 @@ Hello my Friends. I am learning Java Script and I learn about:
 3. Variables identifiers
 4. Primitive values
 5. Variables exescises
-6. 
+6. Conditional statements - if, else, switch
+7. 
