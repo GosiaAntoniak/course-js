@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Udemy Course with Vanila Java Script</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Udemy Course with Vanilla Java Script" name="description"/>
+</head>
+<body>
+<script>
+    /*
+    Wartość początkowa licznika to -2
+    Licznik sprawdzamy czy jest mniejszy równy 2
+    W każdej itereacji sprawdzamy za pomocą if i wyświetlić
+    informację czy liczba jest dodatna, ujemna czy 0
+ 
+ 1. wersja z while
+ 2. wersja z for
+     */
+
+    //EX 1
+    //loop WHILE
+    
+    let a = -2;
+    while (a <= 2) {
+        if (a < 0) console.log("a mniejsze or zera:", a);
+        if (a == 0) {
+            console.log("a ma wartość zero");
+        } else if (a > 0) {
+            console.log("a jest dodatnie:", a);
+        }
+        a++;
+    }
+    
+
+    //EX 2
+    //loop for
+
+    for (let b = -2; b <= 2; b++) {
+        if (b < 0) console.log("b mniejsze or zera:", b);
+        if (b == 0) {
+            console.log("b ma wartość zero");
+        } else if (b > 0) {
+            console.log("b jest dodatnie:", b);
+        }
+        b++;
+    }
+</script>
+</body>
+</html>

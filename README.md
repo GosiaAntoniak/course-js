@@ -10,4 +10,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 6. Conditional statements - if, else, switch
 7. Conditional statements exercises
 8. Loops: while, do while, for
-9. 
+9. Loops exercises
+10. 
