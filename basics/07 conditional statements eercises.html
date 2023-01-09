@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Udemy Course with Vanila Java Script</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Udemy Course with Vanilla Java Script" name="description"/>
+</head>
+<body>
+<script>
+    /* EX - 1
+    Utwórz zmienną temperature o warościach:
+    -10, 0, 10, 20, 30, 40
+    Informacja ze względu na temperaturę czy jest:
+    b. zimno, zimno - 0, wiosna - 10,
+    lato - 20, gorąco - 30, b.gorąco - 40
+    dla temperature < - 10 zostajemy w domu
+    dla temperature > 40 zostajemy też w domu
+    
+    1 wersja z if else
+    2 wersja z switch
+     */
+
+
+    //EX with use: if else
+    let temperature = 0;
+
+    if (temperature == -10) {
+        console.log("Bardzo zimno");
+    } else if (temperature == 0) {
+        console.log("Zimno");
+    } else if (temperature == 20) {
+        console.log("Wiosna");
+    } else if (temperature == 20) {
+        console.log("Lato");
+    } else if (temperature == 30) {
+        console.log("Gorąco");
+    } else if (temperature == 40) {
+        console.log("Bardzo gorąco");
+    } else if (temperature < -10) {
+        console.log("Zostajemy w domu");
+    } else if (temperature > 40) {
+        console.log("Zostajemy też w domu");
+    }
+
+    //EX with use: switch
+    let temperature = 20;
+
+    switch (temperature) {
+        case -10:
+            console.log("Bardzo zimno");
+            break;
+        case 0:
+            console.log("Zimno");
+            break;
+        case 10:
+            console.log("Wiosna");
+            break;
+        case 20:
+            console.log("Lato");
+            break;
+        case 30:
+            console.log("Gorąco");
+            break;
+        case 40:
+            console.log("Bardzo gorąco");
+            break;
+        default:
+            console.log("Zostajemy w domu");
+    }
+</script>
+</body>
+</html>
