@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Udemy Course with Vanila Java Script</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Udemy Course with Vanilla Java Script" name="description"/>
+</head>
+<body>
+<script>
+    function add(a, b) {
+        let c = a + b;
+        console.log("Wynik:", c);
+    }
+
+    add(8, 3);
+    add(20, 15);
+    add(100, 105);
+
+    let x = 10;
+    let y = 45;
+
+    if (x > 5) {
+        add(x, y);
+    }
+
+    /*definicja funkcji
+    nazwa funkcji multiply
+    parametry funkcji a, b
+     */
+    function multiply(a, b) {
+        return a * b;
+    }
+
+    //15 i 4 to argumenty funkcji podczas jej wywołania
+    let result = multiply(15, 4);
+    console.log("result:", result);
+
+    
+    //wyrażenie funkcyjne - function expression
+    
+    let division = function (a, b) {
+        return a / b;
+    }
+    
+    let divisionResult = division(100, 3);
+    console.log("Wynik dzielenia:", divisionResult);
+    
+    //Zmienne lokalne oraz globalne
+    let data = 55; //zmienna globalna dostępna w całym programie JS
+    function test() {
+        let text = "Hello"; //Zmienna lokalna widoczna wyłącznie wewnątrz naszej funkcji
+        console.log("wartość data:", data);
+        console.log("Wartość text:", text);
+    }
+    test();
+    console.log(text); //Uncaught ReferenceError: text is not defined
+    
+    
+</script>
+</body>
+</html>
