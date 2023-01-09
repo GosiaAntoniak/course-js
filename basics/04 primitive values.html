@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Udemy Course with Vanila Java Script</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Udemy Course with Vanilla Java Script" name="description"/>
+</head>
+<body>
+<script>
+    //Dynamicznie typowany język
+    let data = 10; //liczba - Number
+    let num = 89;
+    data = "text"; //tekst - String
+    data = 'text'; //tekst - String - to samo ale z apostrofami
+    data = `Hello
+           World
+           and
+           Hello again!`; //tekst - String - to samo ale z bactica
+    data = `Hello
+           World
+           and ${num}
+           Hello again!`; // łańcuch znaków String - w balticach - template literals
+    let flag = true; //wartość logiczna - Boolean - wartość true
+    flag = false; // Boolean - wartość false - fałsz
+    let someValue; // Brak przypisania wartości podczas deklaracji zmiennej automatycznie przypisze wartość undefined
+    console.log(someValue); //undefined
+    someValue = 77;
+    console.log(someValue);
+    someValue = null; //null
+    console.log(someValue);
+
+    //Symbol
+    //BigInt
+    
+    //Zmienne zawsze deklarujemy przed ich użyciem
+    let name ="Ania";
+    console.log(name);
+    
+    let name = "Daniel"; //Uncaught SyntaxError: Identifier 'name' has already been declared
+</script>
+</body>
+</html>
