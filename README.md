@@ -14,4 +14,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 10. Functions
 11. Functions exercises
 12. Objects introduction
-13. 
+13. Objects introduction exercises
+14. 

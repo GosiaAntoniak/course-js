@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Udemy Course with Vanila Java Script</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Udemy Course with Vanilla Java Script" name="description"/>
+</head>
+<body>
+<script>
+    /*
+    Tworzymy obiekt person
+    właściwości: imię, nazwisko, wiek, miasto,
+    kod pocztowy, kraj
+    + metoda getName powinna nam zwrócić imię i nazwisko
+    np name + " " + surname
+     */
+
+    let person = {
+        name: "Margaret",
+        surname: "Antoniak",
+        age: 33,
+        address: {
+            city: "Gdańsk",
+            postalCode: "80-175",
+            country: "Poland"
+        },
+
+
+        getName: function () {
+            return this.name + " " + this.surname;
+        }
+    };
+
+    console.log(person.getName());
+    console.log(person.address.city);
+    
+    function getNewPerson(name, surname, age) {
+        return {
+            name: name,
+            surname: surname,
+            age: age
+        };
+    }
+    const user = getNewPerson("Ania", "Kowalska", 29);
+    console.log(user);
+</script>
+</body>
+</html>
