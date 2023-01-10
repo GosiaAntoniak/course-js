@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Udemy Course with Vanila Java Script</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Udemy Course with Vanilla Java Script" name="description"/>
+</head>
+<body>
+
+<button id="button1">Click me</button>
+<button id="button2">Click me 2</button>
+
+<script>
+    function test1() {
+
+    }
+
+    let test2 = function () {
+        //funkcja anonimowa bo nie ma nazwy przypisana do zmiennej test2
+    }
+    test2();
+
+    //definicja funkcji z callbackiem jako argument
+    function test3(a, callback) {
+        console.log("test3:", a);
+        callback(a);
+    }
+
+    function test4(arg) {
+        console.log("test4 arg:", arg);
+    }
+
+    test3(12, test4);
+    
+    
+    //drugi przykład
+    function ok(num) {
+        console.log("Liczba dodatnia lub > 0, num:", num);
+    }
+    
+    function err(num) {
+        console.log("Liczba ujemna, błąd, num:", num);
+    }
+    
+    function testPositiveNum(n, resolve, error) {
+        if (n >= 0) {
+            //warunek jest spełniony n >= 0
+            resolve(n); //wszystko ok
+        } else  {
+            //ujemna wartość dla nas błąd
+            console.error(n);
+        }
+    }
+    testPositiveNum(5, ok, err);
+    
+    //przykład nr 3 podpięcie funkcji callback pod zdarzenie click
+    
+    function buttonClicked(event) {
+        console.log("Przycisk kliknięty");
+    }
+    
+    //podpięcie callbacka czyl funkcji buttonClicked pod zdarzeniem click
+    document.getElementById("button1").addEventListener("click", buttonClicked);
+    
+    document.getElementById("button2").addEventListener("click", function () {
+        console.log("button2 clicked!");
+    });
+</script>
+</body>
+</html>
