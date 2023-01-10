@@ -23,4 +23,4 @@ Hello my Friends. I am learning JavaScript and I learn about:
 19. Load event and innerHTML
 20. Compound interest
 21. Typeof
-22. 
+22. Number
