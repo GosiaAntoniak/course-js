@@ -22,4 +22,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 18. Callback exercises
 19. Load event and innerHTML
 20. Compound interest
-21. 
+21. Typeof
+22. 
