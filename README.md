@@ -20,4 +20,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 16. Passing by reference and value exercises
 17. Callback
 18. Callback exercises
-19. 
+19. Load event and innerHTML
+20. 
