@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<style>
+    #calc {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+        max-width: 450px;
+        text-align: right;
+    }
+    
+    .result {
+        font-weight: bold;
+    }
+</style>
+<body>
+<div id="calc"></div>
+<label>Kapitał:</label>
+<input type="text" id="capital" value="1000">
+
+<label>Oprocentowanie:</label>
+<input type="text" id="rate" value="0.04">
+
+<label>Kapitalizacja co ile miesięcy:</label>
+<input type="text" id="n" value="12">
+
+<label>Na ile lat lokata:</label>
+<input type="text" id="num-years" value="5">
+
+<span></span> <button id="calculate">Oblicz</button>
+
+<label class="result">Wartość końcowa:</label>
+<input type="text" id="result-value" value="5">
+<script>
+    // capital * Math.pow( (1+0.04/12), (12 * 5) )
+
+    const inputCapital = document.getElementById("capital");
+    const inputRate = document.getElementById("rate");
+    const inputN = document.getElementById("n");
+    const inputYears = document.getElementById("num-years");
+    const inputResultValue = document.getElementById("result-value");
+    
+    /*
+    let capital = inputCapital.value;
+    let rate = inputRate.value;
+    let n = inputN.value;
+    let t = inputYears.value;
+    
+     */
+
+   // let finalMoney = capital * Math.pow((1 + (rate / n)), n * t);
+    //console.log(Math.floor(finalMoney) ); //zaokrąglanie w dół
+    //console.log(Math.ceil(finalMoney) ); //zaokrąglanie w górę
+
+    function calculateCompoundIntrest(capital, rate, n, t) {
+        return capital * Math.pow((1 + (rate / n)), n * t);
+    }
+    
+    document.getElementById("calculate").addEventListener("click", function () {
+        let capital = inputCapital.value;
+        let rate = inputRate.value;
+        let n = inputN.value;
+        let t = inputYears.value;
+
+        let result = calculateCompoundIntrest(capital, rate, n, t);
+inputResultValue.value = result.toFixed(2);
+    })
+    
+</script>
+</body>
+</html>
