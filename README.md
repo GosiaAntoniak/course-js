@@ -24,4 +24,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 20. Compound interest
 21. Typeof
 22. Number
-23. 
+23. String
+24. 
