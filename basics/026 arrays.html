@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<body>
+<script>
+    /*tablice to uporządkowana kolekcja elementów
+    nie są typem a obiektem
+    mogą przechwywać dowolne typy: proste i złożone
+    elementy są uporządkowane w tablicy za pomocą indeksów, każdy indeks
+    to liczba całkowita, liczone są od 0
+     */
+    let a = [];
+    let b = [22, "tekst", {a: 1}, [5, 4, 3], function () {
+    }, null];
+    console.log(b);
+    console.log(b[6]); //undefined
+    console.log(b[b.length - 1]); // ostatni element to null
+    console.log(b[0]); //22
+
+    b[2] = 99; //nadpisanie wartości 2giego indeksu
+    console.log(b);
+
+    let c = new Array(12, "test", 9);
+    console.log(c);
+    let d = Array(1, 2, 3);
+    console.log(d);
+    let e = [];
+    e[0] = "test1";
+    e[1] = "test2";
+    e[2] = "test8";
+    e[e.length] = "test4";
+    e.push("test5");
+    console.log(e);
+
+    let f = [0, 1, 2, 3, 4, 5, 6, 7];
+    console.log(f);
+    f.length = 4;
+    console.log(f); //obcięcie tablicy do 4 elementów
+    delete f[1];
+    console.log(f); //skasowanie indeksu
+    console.log(f[1]); // undefined
+    
+    console.log(1 in f); // false ponieważ indeks nie istnieje
+    console.log(2 in f); //true
+    
+    let g = Array(5).fill(7);
+console.log(g); //7,7,7,7,7
+
+    //iteracja przechodzenie po elementach tablicy
+    let h = [99, 56, 45, "tekst"];
+    
+    for (let i = 0; i < h.length; i++) {
+        console.log(h[i]);
+    }
+    
+    let arr1 = ["el1", "el2", "el3", 88];
+    arr1.forEach( function (item, index, array) {
+        console.log(item, index, array)
+    });
+    
+    let arr2 = arr1.concat([1,2,3]);
+    console.log(arr2);
+    let arr3 = arr1.concat([5,6], [10,11,12]);
+    console.log(arr3);
+    
+    let strFromArr = arr1.join();
+    console.log(strFromArr);
+    
+    let strFromArr2 = arr1.join("|");
+    console.log(strFromArr2);
+    
+    let arr4 = [1,2,3,4];
+    arr4.reverse();
+    console.log(arr4); // 4,3,2,1 odwrócona tablica
+    
+    arr4.push(99);
+    console.log(arr4); //na koniec dodaje 99
+    
+    let arrE1 = arr4.pop();
+    console.log(arrE1); //99 zabiera ostatni element z tablicy
+    console.log(arr4); //4,3,2,1
+    
+</script>
+
+</body>
+</html>

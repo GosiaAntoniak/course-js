@@ -27,4 +27,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 23. String
 24. Boolean
 25. Null & undefined
-26. 
+26. Arrays
+27. 
