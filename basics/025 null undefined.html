@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<body>
+<script>
+    /*undefined to identyfikator, jest to zarówno typ jak i wartość, undefined ma tylko jedną wartość,
+    automatycznie jest przypisywana do nowo zadeklarowanej zmiennej, która nie ma wartości
+    */
+    let data
+    typeof data; //typ jest undefined
+    
+    /*undefined jest również jako identyfikator częścią globalnego obiektu:
+*/
+    console.log(window.undefined);
+    /*undefined jest zwykle rozumiane jako brak wartości, że wartość nie została jeszcze powiązana ze zmienną */
+    
+    /*nie wolno przesłaniać lokalnej wartości undefined natomiasto jest to możliwe
+    Uwaga ni można tak robić, jako ciekawostka
+    można utworzyć zmienną lokalną undefined i nadać jej wartość
+     */
+    function test() {
+        let undefined = 2;
+        console.log("wartość:" + undefined);
+    }
+    test(); //wartość 2
+    //operator typeof dla undefined zwraca string "undefined" ponieważ jest to prymityw
+    
+    typeof undefined; //"undefined"
+    
+    let a; // zmienna jest zadekladowana
+    console.log(a); //undefined nie ma wartości w zmiennej
+    if(a == undefined) console.log("Brak wartości");
+    
+    //b; //Uncaught ReferenceError: b is not defined
+    //w praktyce zmienna jest nie zadeklarowana bo nie ma użytego let const czy var
+    
+    console.log(typeof b); //undefined
+    //console.log(typeof b); //błąd
+    
+    
+    //null oznacza wartość pustą, wcześniej mogła być przechowywana wartość, ale już nie jest
+    //W przeciwieństwie do undefined null jest słowem kluczowym a nie identyfikatorem.
+    
+   // let data = 10; //przypisana wartość 10
+   // data = null; // teraz data nie ma wartości, jest null
+    
+    //Operator typeof dla null zwraca string "object" mimo że jest to prymityw
+    typeof null; //"object"
+    
+    //null i undefined to falsy values
+    //przy konwersji null oraz undefined na typ boolean stają się wartością false
+    
+    if(null) { console.log("nie wykona się");}
+if(undefined) { console.log("nie wykona się");}
+    
+    //proste porównanie tylko wartości jeśli nie są tego samego typu to będzie konwersja
+    if(null == undefined) console.log("true wykona się")
+    
+    //porównanie ścisłe typy się nie zgadzają więc nie równe
+    if(null === undefined) console.log("false nie wykona się")
+    
+    let test = 5;
+    console.log(test); //5
+    test = null;
+    console.log(test); //null
+    console.log(typeof null); //"object"
+    
+    if(null) console.log("nie wykona się bo null zamienione na false");
+    if(undefined) console.log("nie wykona się bo undefined to false");
+    
+    //porównanie proste
+    if(null == undefined) console.log("wykona się bo true");
+    
+    //porównanie ścisłe
+    //porównanie zarówno typu (false) jak i wartości
+    if(null === undefined) console.log("nie wykona się");
+    
+</script>
+
+</body>
+</html>
+

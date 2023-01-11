@@ -26,4 +26,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 22. Number
 23. String
 24. Boolean
-25. 
+25. Null & undefined
+26. 
