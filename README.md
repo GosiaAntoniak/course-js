@@ -37,4 +37,6 @@ Hello my Friends. I am learning JavaScript and I learn about:
 33. Scope ecercises
 34. Currency table - create of the current NBP exchange rate table
 35. Hoisting
-36. 
+36. Objects
+37. Objects exercises
+38. 
