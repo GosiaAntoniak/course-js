@@ -34,4 +34,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 30. Operators
 31. Type + conversion
 32. Scope
-33. 
+33. Scope ecercises
+34. 
