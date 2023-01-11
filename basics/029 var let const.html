@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<body>
+<script>
+    var data = 5; //deklaracja za pomocą var istnieje od zawsze
+    //zmienne var maja zakres funkcyjny
+    if(1 == 1) {
+        var text = "txt";
+    }
+    console.log(text); //txt widoczne poza blokiem
+    
+    for (var i = 0; i > 3; i++) {
+        console.log(i);
+    }
+    console.log("i:", i);
+    
+    function foo() {
+        var fooTest = 100;
+    }
+    //console.log(fooTest); //error
+    
+    
+    let info = 10; //dodany w ES6 czyli EcmaScript 2015
+    //zakres blokowy
+    
+    if(1 == 1) {let someText = "someText";}
+    //console.log(someText); // error
+
+    for (let j = 0; j > 3; j++) {
+        console.log(j);
+    }
+    //console.log("j:", j); //error
+
+    function fooLet() {
+        var fooLet = 100;
+    }
+    //console.log(fooLet); //error
+    
+    
+    const element = 25; //dodany w ES6 czyli EcmaScript 2015
+    //zakres blokowy
+    //zakres tak samo jak z let
+    
+    
+
+
+</script>
+
+</body>
+</html>
