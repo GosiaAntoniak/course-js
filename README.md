@@ -32,4 +32,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 28. Simple clock
 29. Var let const
 30. Operators
-31. 
+31. Type + conversion
+32. 
