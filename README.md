@@ -29,10 +29,12 @@ Hello my Friends. I am learning JavaScript and I learn about:
 25. Null & undefined
 26. Arrays
 27. Arrays c.d.
-28. Simple clock
+28. Simple clock - create a watch with the current time
 29. Var let const
 30. Operators
 31. Type + conversion
 32. Scope
 33. Scope ecercises
-34. 
+34. Currency table - create of the current NBP exchange rate table
+35. Hoisting
+36. 

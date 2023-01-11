@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            background: #363d57;
+        }
+
+        .container {
+            width: 400px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .container h3 {
+            text-align: center;
+        }
+
+        .rate {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            margin: 10px;
+            border-bottom: 1px dotted black;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3>Tabela NBP nr:<span id="date"></span></h3>
+    <div id="data-table">
+    </div>
+</div>
+<script>
+    startApp();
+
+    async function startApp() {
+        const apiUrl = "https://api.nbp.pl/api/exchangerates/tables/a/?format=json";
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        processData(data[0]);
+    }
+
+    function processData(data) {
+        const code = data.effectiveDate;
+        const tableNum = data.no;
+        const ratesArr = data.rates;
+        const table = data.table;
+
+        const dataTableDiv = document.getElementById("data-table");
+        document.getElementById("date").innerHTML = tableNum;
+    
+        ratesArr.forEach(function (el) {
+            const code = el.code; //USD
+            const currency = el.currency; //dolar amerykański
+            const price = el.mid; //3.987
+            addRateContent(code, currency, price, dataTableDiv);
+        });
+    }
+    
+    function addRateContent(code, currency, price, dataTableDiv) {
+        const el = document.createElement("div");
+        el.classList.add("rate");
+        el.innerHTML = `
+        <div>${code}</div>
+        <div>${currency}</div>
+        <div>${price} zł</div>
+        `;
+        dataTableDiv.append(el);
+    }
+
+</script>
+</body>
+</html>
