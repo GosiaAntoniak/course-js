@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<body>
+<script>
+    //boolean - wartości logiczne: true albo false (słowa kluczowe)
+    let flag = true;
+    if (flag == true) {
+        console.log("prawda")
+    }
+    ;
+    if (flag == false) { //nie wykona sie bo flag ma false
+        console.log("prawda")
+    }
+    ;
+    if (flag) console.log("Skrótowo i prawda");
+    //wykrzyknik odwraca wartość logiczną czyli sprawdzamy poniżej czy jest false
+    flag = false;
+    if (!flag) console.log("Skrótowo i prawda");
+    console.log(true); //true
+    console.log(!true); //false
+    console.log(false); //false
+    console.log(!false); //true
+
+    if(4 > 1) { //wynikiem jest true czyli if się wykona
+        console.log("4 > 1");
+    };
+    
+    //falsy values - fałszywe wartości POJAWIA SIĘ NA REKRUTACJI
+    let data = "";
+    if (data) { /*data będzie zamienione na wartość boolean/
+        nazywamy to konwersją z jednego typu wartości na inny
+        pusty string został skonwertowany na boolean czyli fałsz
+        */
+        console.log("prawda");
+    };
+    
+    /*falsy values zawsze konwertowane są na FALSE!!!!
+    Przykłady falsy values
+    "" pusty String
+    wartość 0, -0
+    1n bigInt
+    NAN
+    null
+    undefined
+    false
+    */
+    
+    let data3 = null; //null skonwertowany na false
+    if(data3) {
+        console.log("data3 ma wartość true");
+    } else {
+        console.log("data 3 ma wartość false")
+    }; //data3 ma wartość false
+
+
+    //truthly value czyli prawdziwe wartości
+    let data2 = "tekst";
+    if (data2) { /*data będzie zamienione na wartość boolean/
+        nazywamy to konwersją z jednego typu wartości na inny
+        wypełniony string został skonwertowany na boolean czyli prawdę
+        */
+        console.log("prawda");
+    };
+    
+    /*truthly vaues przykłady
+    te wartości konwertują na true
+    "tekst"
+    liczby inne niż 0 np (-1, 1, 34
+    jakikolwiek obiekt np []; [1, 3, 2];  [false, false]
+    {}; {a: 1}; window, {flag: false}
+    function test() {}
+     */
+    let test = "tekst";
+    if(test ) console.log("prawda:", test);
+    
+</script>
+
+</body>
+</html>

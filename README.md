@@ -25,4 +25,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 21. Typeof
 22. Number
 23. String
-24. 
+24. Boolean
+25. 
