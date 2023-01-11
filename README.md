@@ -33,4 +33,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 29. Var let const
 30. Operators
 31. Type + conversion
-32. 
+32. Scope
+33. 
