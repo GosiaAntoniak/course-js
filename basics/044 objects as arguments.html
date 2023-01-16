@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<body>
+<script>
+    let user = {
+        name: "Ania",
+        age: 32,
+        address: {
+            country: "Poland"
+        },
+        rank: "guest"
+    };
+    
+    function promoteToAdmin(user) {
+        if (!user) return;
+        if (user.name && user.rank) {
+            user.rank = "admin";
+        }
+        
+        let department = user.department || "IT";
+        console.log(user.name, "promoted to admin in ", department);
+    }
+    
+    promoteToAdmin(user);
+    console.log(user);
+
+</script>
+</body>
+</html>

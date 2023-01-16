@@ -45,4 +45,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 41. Function arguments
 42. Rest spread
 43. Cat facts APP
-44. 
+44. Objects as arguments
+45. 
