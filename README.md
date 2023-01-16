@@ -57,4 +57,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 53. This execution context
 54. This events
 55. This function constructor
-56. 
+56. Closures
+57. 

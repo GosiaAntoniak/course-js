@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<body>
+<script>
+    function outer() {
+        var b = 10;
+        function inner() {
+            var a = 1;
+            console.log(b);
+        }
+        return inner;
+    };
+    const testInner = outer(); //undefined
+    testInner(); //10
+    console.dir(testInner);
+    
+    
+    function test() {
+        let a = 0;
+        
+        function inner() {
+            console.log("a:" + a);
+            a++
+        }
+        return inner;
+    }
+    const show = test();
+    console.dir(show);
+    show();
+    
+    function test(x) {
+        return function (y) {
+            console.log(x * y);
+        }
+    }
+    const multiply10 = test(10);
+    multiply10(5);
+    console.dir(multiply10);
+    
+    function carDetails() {
+        let privName = "mustang";
+        let privBrand = "ford";
+        
+        function getInfo () {
+            return {name: privName, brand: privBrand}; };
+        function setInfo(name, brand) { privName = name; privBrand = brand; };
+        return {
+            getInfo: getInfo,
+            setInfo: setInfo,
+            data: 99,
+            printInfo: function () {
+                console.log(privName, privBrand)
+            }
+        };
+    }
+    const car = carDetails();
+    car.getInfo();
+    car.setInfo("pontiac", "GTO");
+    car.printInfo();
+    console.dir(car);
+    
+</script>
+</body>
+</html>
