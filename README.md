@@ -56,4 +56,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 52. Call apply bind
 53. This execution context
 54. This events
-55. 
+55. This function constructor
+56. 
