@@ -50,4 +50,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 46. Functions as arguments
 47. Return
 48. Anonymous function
-49. 
+49. Fat arrow
+50. 
