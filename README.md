@@ -42,4 +42,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 38. Objects props and methods
 39. Random joke APP
 40. Function intro
-41. 
+41. Function arguments
+42. 

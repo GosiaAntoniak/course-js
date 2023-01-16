@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<body>
+<script>
+    function test(primitive, obj) {
+        console.log(arguments);
+        primitive = 34;
+        console.log(primitive, obj);
+        obj.name = "Karol";
+    }
+
+    let num = 100;
+    let objSource = {name: "Ola"};
+    test(num, objSource); //34, name: "Ola"
+    console.log("num:", num); //100
+    console.log("objSource.name:", objSource.name); // Karol
+
+    function addAll() {
+        let result = 0;
+        for (let i = 0; i < arguments.length; i++) {
+            result += arguments[i];
+        }
+        return result;
+    }
+    let result = addAll(1, 2, 3, 5, 7, 8);
+    console.log(result); //26
+
+</script>
+
+</body>
+</html>
