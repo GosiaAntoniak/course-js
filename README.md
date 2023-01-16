@@ -47,4 +47,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 43. Cat facts APP
 44. Objects as arguments
 45. Deafult function arguments
-46. 
+46. Functions as arguments
+47. 
