@@ -34,7 +34,7 @@ Hello my Friends. I am learning JavaScript and I learn about:
 30. Operators
 31. Type + conversion
 32. Scope
-33. Scope ecercises
+33. Scope exercises
 34. Currency table - create of the current NBP exchange rate table
 35. Hoisting
 36. Objects
@@ -49,3 +49,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 45. Deafult function arguments
 46. Functions as arguments
 47. Return
+48. Anonymous function
+49. 
