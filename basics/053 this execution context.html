@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<body>
+<script>
+    console.log(this); // window
+    console.log(this === globalThis); // true
+    
+    function foo() {
+        console.log("foo this: ", this);
+    }
+    
+    foo(); // foo, window
+
+    function bar() {
+        "use strict"
+        console.log("bar this: ", this);
+    }
+
+    bar(); // bar, undefined
+    
+    let obj = {
+        name: "test",
+        bar: function () {
+            console.log("foo this: ", this);
+        }
+    };
+        
+        obj.bar();
+        
+        
+        let car = {
+            name: "Mustang",
+            print: function (arg) {
+                console.log(this.name, arg)
+            }
+        };
+        
+        let citroen = {
+            name: "Xara"
+        };
+        car.print.call(citroen, "test");
+    
+    
+    
+</script>
+
+</body>
+</html>

@@ -53,4 +53,6 @@ Hello my Friends. I am learning JavaScript and I learn about:
 49. Fat arrow
 50. Random meme APP
 51. IIFE
-52. 
+52. Call apply bind
+53. This execution context
+54. 
