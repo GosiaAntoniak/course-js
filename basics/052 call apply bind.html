@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<body>
+<script>
+    let car = {
+        brand: "Ford",
+        print: function(topSpeed, country) {
+            console.log(this.brand, topSpeed, country);
+        }
+    }
+    car.print(270, "USA");
+    
+    let dodge = {
+        brand: "Dodge",
+        model: "Viper"
+    }
+    
+    car.print.call(dodge, 280, "USA");
+    car.print.apply(dodge, [280, "USA"]);
+    
+    let printDodge = car.print.bind(dodge, 280, "USA");
+    printDodge();
+car.print(270, "USA");
+    
+</script>
+
+</body>
+</html>
