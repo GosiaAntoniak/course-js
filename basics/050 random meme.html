@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #content-preload {
+            display: none;
+            /*height: 20vh; */
+        }
+
+        #content {
+            margin-top: 10px;
+            height: 60vh;
+        }
+
+        #text {
+            font: 1.2rem bold Verdana, sans-serif;
+        }
+    
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="" alt="" id="content-preload">
+    <img src="" alt="" id="content">
+    <div id="text"></div>
+</div>
+<script>
+    const randomMeme = {
+        contentPreload: document.getElementById("content-preload"),
+        content: document.getElementById("content"),
+        text: document.getElementById("text"),
+
+        init: function () {
+            console.log("App started")
+            this.getContent();
+            document.addEventListener("keyup", (event) => {
+                if (event.code = "Space") {
+                    this.getContent();
+                }
+            });
+        },
+
+        getContent: async function () {
+            const apiUrl = "https://some-random-api.ml/img/dog";
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+
+            
+            this.preloadMeme(data);
+        },
+        
+        preloadMeme: function (data) {
+            this.contentPreload.src = data.link;
+            this.contentPreload.onerror = () => {
+                console.log("img load error");
+                this.getContent();
+            }
+            
+            this.contentPreload.onload = () => {
+                console.log("img ok");
+                console.log(this);
+                this.showMeme(data);
+            }
+        },
+
+        showMeme: function (data) {
+            console.log(data);
+            // const imgSrc = data.image;
+            // const caption = data.caption;
+            
+            this.content.src = data.link;
+            // this.text.innerHTML = 'text';
+        }
+    };
+
+    randomMeme.init();
+</script>
+
+</body>
+</html>
