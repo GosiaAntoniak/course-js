@@ -58,4 +58,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 54. This events
 55. This function constructor
 56. Closures
-57. 
+57. Problems with closures
+58. 
