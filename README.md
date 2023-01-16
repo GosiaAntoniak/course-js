@@ -52,4 +52,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 48. Anonymous function
 49. Fat arrow
 50. Random meme APP
-51. 
+51. IIFE
+52. 
