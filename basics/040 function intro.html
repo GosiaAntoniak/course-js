@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<body>
+<script>
+    //function statement
+    function test (arg) {
+        console.log(arg);
+    }
+    
+    //function expression
+ //   let test = function (arg) {
+ //       return arg * 2;
+  //  }
+    
+    //scope w funkcji
+    function test1(arg1) {
+        var localVar = 10;
+        console.log(arg1, localVar);
+    }
+    
+   /* test(5);
+    console.log(arg1, localVar) //Uncaught ReferenceError: arg1 is not defined
+    
+    */
+    
+    //funkcje zagnieżdżone
+    var someGlobal = "text";
+    function foo(arg) {
+        var local = 5;
+        function nested() {
+            var c = 10;
+            console.log(someGlobal); //text
+            console.log(arg); //99
+            console.log(local); //5
+            console.log(c); //10
+        }
+        nested();
+    }
+    
+    foo(99);
+    
+    //hoisting funkcji - podobnie jak u zmiennych przy funkcjach zachodzi hoisting czyli przeniesienie deklaracji na początek zakresu\
+    
+    function test() {
+        bar();
+        foo();
+        
+        function foo() { console.log("foo");}
+        function bar() { console.log("bar");}
+    }
+    test();
+    
+    //function statement
+    function foo (arg1, arg2) {
+        console.log(arg1, arg1);
+    }
+    foo("test1", "test2");
+    
+    //function expression
+    const addNums = function (a, b, c) {
+        return a + b;
+    }
+    console.log(addNums(3, 5)); //8
+    console.log(typeof addNums); // function
+    console.log(addNums.name); // addNums
+    console.log(addNums.length); // 3
+    
+    addNums.something = "test";
+    console.dir(addNums);
+    console.dir(addNums.something); //test
+    console.log(addNums.toString()); //ciało funkcji
+    
+    let globalVariable = 44;
+    //scope - zakres zmiennych w funkcji
+    function testScope(arg1) {
+        //"use strict"
+        //localTest = 99; //localTest is not defined
+        let localVariable = 10;
+        console.log(arg1, localVariable); // lokalne zmienne
+    }
+    testScope(7); // 7,10
+    //console.log(arg1, localVariable); //dane lokalne nie dostępne poza function
+    
+    //zagnieżdżone funkcje
+    function testFunction1() {
+        const data = 10;
+        const result1 = test2(8);
+        console.log("result1:", result1);
+        function test2(arg) {
+            let data = 99;
+            return arg + data;
+        }
+       const result2 = test2(8);
+        console.log("result2:", result2);
+    }
+    
+    testFunction1(18);
+    //test2(); //uncaught ReferenceError: test2 is not defined
+    
+    let testFuncEcpr = function () {
+        console.log("test func expr!");
+    }
+    testFuncEcpr();
+    
+    
+</script>
+
+</body>
+</html>
