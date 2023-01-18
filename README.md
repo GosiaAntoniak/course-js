@@ -61,4 +61,4 @@ Hello my Friends. I am learning JavaScript and I learn about:
 57. Problems with closures
 58. DOM start
 59. DOM events
-60. 
+60. Event loop
