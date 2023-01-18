@@ -62,3 +62,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 58. DOM start
 59. DOM events
 60. Event loop
+61. AJAX
+62. 
