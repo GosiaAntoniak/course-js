@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Udemy Course with Vanila Java Script</title>
+</head>
+<script>
+    
+    //klawisze
+    window.addEventListener("load", function () {
+        let input = document.getElementById("input");
+        input.onclick = function inputClicked(event) {
+            console.log("input kliknięty");
+        }});
+        
+        
+        //poruszanie myszką
+      /*  let body = document.getElementById("body");
+        function mouseMove(event) {
+            console.log(event);
+            console.log("Klawisz kliknięty: ");
+        }
+        
+        body.addEventListener("mousemove", mouseMove);
+    });
+
+    //na click
+    let body = document.getElementById("body");
+    function click(event) {
+        console.log(event);
+        console.log("click: ", event.target);
+        
+        body.removeEventListener("click", click);
+    }
+
+    body.addEventListener("click", click);
+   
+       */
+</script>
+<body id="body">
+<p id="p">
+<form id="form" action="">
+    <input id="input" type="text">
+</form>
+</p>
+</body>
+</html>
