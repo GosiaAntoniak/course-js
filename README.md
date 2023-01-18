@@ -67,4 +67,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 63. Infinite scroll APP
 64. Dark/light mode APP
 65. Analog clock APP
-66. 
+66. Drawing canvas
+67. 
