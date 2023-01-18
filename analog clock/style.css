@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    font-size: 1rem;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 15rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.hour, .minute, .second {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.hour {
+    height: 11rem;
+width: 11rem;
+}
+
+.hour::before {
+  content: "";
+    height: 50%;
+width: 6px;
+    border-radius: 3px;
+    background-color: black;
+}
+
+.minute {
+    height: 12rem;
+    width: 12rem;
+}
+
+.minute::before {
+    content: "";
+    height: 50%;
+    width: 4px;
+    border-radius: 2px;
+    background-color: orange;
+}
+
+.second {
+    height: 13rem;
+    width: 13rem;
+}
+
+.second::before {
+    content: "";
+    height: 50%;
+    width: 2px;
+    border-radius: 1px;
+    background-color: red;
+}

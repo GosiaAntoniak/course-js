@@ -66,4 +66,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 62. Random color APP
 63. Infinite scroll APP
 64. Dark/light mode APP
-65. 
+65. Analog clock APP
+66. 
