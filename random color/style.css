@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    font-size: 1rem;
+    transition: background-color 500ms linear;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 15rem;
+    background-color: white;
+    border: 3px solid black;
+}
+
+#color-button {
+    padding: 5px;
+    margin: 10px;
+}
+
+#color-input {
+    width: 5rem;
+    text-align: center;
+}
