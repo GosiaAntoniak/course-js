@@ -59,4 +59,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 55. This function constructor
 56. Closures
 57. Problems with closures
-58. 
+58. DOM start
+59. 
