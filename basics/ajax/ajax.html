@@ -15,12 +15,30 @@
             if (xhrObject.status === 200
             || xhrObject.status === 304) {
                 console.log(xhrObject.responseText);
+                parseXML(xhrObject.responseText);
             }
         }
     }
     
     xhrObject.open("GET", "test.xml", true);
     xhrObject.send("name=Ola&city=Wawa&postalCode=0000");
+    
+    function parseXML(xmlStr) {
+        let domParser = new DOMParser();
+        let xmlObj = domParser.parseFromString(xmlStr, "application/xml");
+        if(xmlObj.documentElement.nodeName === "parseerror") {
+            console.log("Błąd pliku XML");
+        } else {
+            console.log(xmlObj);
+        }
+    }
+    
+    function showData(xmlObj) {
+        let booksCollection = xmlObj.getElementsByTagName("book");
+        console.log(booksCollection);
+        let book1 = booksCollection[0];
+        console.log(book1.attributes["lang"].nodeValue);
+    }
 </script>
 </body>
 </html>
