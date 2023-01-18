@@ -39,6 +39,27 @@
         let book1 = booksCollection[0];
         console.log(book1.attributes["lang"].nodeValue);
     }
+    
+    //json
+    function getJSONFile(path, callback) {
+        let xhrObject = new XMLHttpRequest();
+        xhrObject.onreadystatechange = function () {
+            if (xhrObject.readyState === 4) {
+                if (xhrObject.status === 200 || xhrObject.status === 304) {
+                    if (callback) callback(xhrObject.responseText);
+                }
+            }
+        }
+        xhrObject.open("GET", path);
+        xhrObject.send();
+    }
+    
+    getJSONFile("books.json", function (data) {
+        console.log(data);
+        let json = JSON.parse(data);
+        console.log(json);
+    });
+    
 </script>
 </body>
 </html>
