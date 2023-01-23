@@ -71,3 +71,5 @@ Hello my Friends. I am learning JavaScript and I learn about:
 67. Lightbox 
 68. Form validation
 69. Multi step form
+70. Connection checker
+71. 
