@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multi step form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h4>Rejestracja</h4>
+    <form action="#">
+        <div class="step step-1 active">
+            <div class="field-control">
+                <input type="text" id="username" name="username"
+                       required placeholder="Nazwa użytkownika">
+            </div>
+            <div class="field-control">
+                <input type="email" id="email" name="email"
+                       required placeholder="Email">
+            </div>
+            <div class="field-control">
+                <input type="password" id="password" name="password"
+                       required placeholder="Hasło">
+            </div>
+            <div class="buttons-container first-step">
+                <button type="button" class="next-btn">Dalej</button>
+            </div>
+        </div>
+        <div class="step step-2">
+            <div class="field-control">
+                <input type="text" id="phone" name="phone"
+                       placeholder="Telefon">
+            </div>
+            <div class="field-control">
+                <input type="text" id="city" name="city"
+                       placeholder="Miasto">
+            </div>
+            <div class="buttons-container">
+                <button type="button" class="previous-btn">Wstecz</button>
+                <button type="button" class="next-btn">Dalej</button>
+            </div>
+        </div>
+        <div class="step step-3">
+            <div class="field-control">
+                <input type="text" id="postal-code" name="postal-code"
+                       placeholder="Kod pocztowy">
+            </div>
+            <div class="field-control">
+                <input type="checkbox" id="tos" name="tos">
+                <label for="tos">Akceptuje regulamin</label>
+            </div>
+            <div class="buttons-container">
+                <button type="button" class="previous-btn">Wstecz</button>
+                <button type="submit" class="submit-btn">Wyślij</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>

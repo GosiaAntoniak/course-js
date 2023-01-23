@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0, 0.2);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.container h4 {
+    text-align: center;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.field-control {
+    margin-top: 20px;
+}
+
+.field-control input {
+    width: 100%;
+    height: 40px;
+    margin: 4px auto;
+    padding: 0 10px;
+    outline: none;
+    border: 2px solid white;
+    background-color: white;
+    box-shadow: 0 0.2rem 0.4rem #0000003d;
+}
+
+.field-control input::placeholder {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.field-control input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 0;
+}
+
+.field-control input.invalid-input {
+    border: 2px solid red;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-container.first-step {
+    justify-content: flex-end;
+}
+
+.step button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: #277ffd;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+button.submit-btn {
+    background-color: #53b243;
+}
+
+button.submit-btn:hover {
+    background-color: #5bc348;
+}
